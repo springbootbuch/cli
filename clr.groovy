@@ -1,6 +1,6 @@
 @Service
 class Greeter {
-    def hello = {name -> println "Hello, ${name}"}
+    def hello = {name -> println "Hello, $name"}
 }
 
 @Component
