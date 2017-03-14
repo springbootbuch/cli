@@ -11,17 +11,20 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = HelloWorldController.class)
+@ContextConfiguration(
+    classes = HelloWorldController.class)
 @WebMvcTest
 class HelloWorldControllerTest {
     @Autowired
     private MockMvc mockMvc
-    
+
     @Test
-    void helloWorldShouldWork() throws Exception {        
+    void helloWorldShouldWork() throws Exception {
         this.mockMvc
-            .perform(get("/hello").param("name", "World"))
+            .perform(
+                get("/hello").param("name", "World"))
             .andExpect(status().isOk())
-            .andExpect(content().string("Hello, World\n"))
+            .andExpect(
+                content().string("Hello, World\n"))
     }
 }
