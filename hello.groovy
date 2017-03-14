@@ -1,8 +1,8 @@
 @RestController
 class HelloWorldController {
     @GetMapping("/hello")
-    String hello(
-        @RequestParam final String name
+    def hello(
+        @RequestParam name
     ) {
         "Hello, $name\n"
     }
